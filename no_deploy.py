@@ -1,10 +1,12 @@
 #!/usr/bin/python
+import urllib2
 
-with open('test.py', 'r') as f:
-    read_data = f.read()
+url = 'https://raw.githubusercontent.com/kristjankorjus/nodeploy_test/master/test.py'
+response = urllib2.urlopen(url)
+python_script = response.read()
 
 __name__ = 'random'
 
-exec(read_data)
+exec(python_script)
 
 print test()
