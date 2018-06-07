@@ -1,8 +1,11 @@
 #!/usr/bin/python
-import numpy as np
+# import numpy as np
 
 def test():
-    return np.zeros(2)
+    result_string = ''
+    for i in range(10):
+        result_string = result_string + 'Hello world!\n'
+    return result_string
 
 if __name__ == '__main__':
     print test()
